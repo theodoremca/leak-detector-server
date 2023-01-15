@@ -1,7 +1,7 @@
 "use strict";
 
 const firebase = require("./fbService");
-// const Student = require("../models/student");
+require("firebase/firestore");
 const firestore = firebase.firestore();
 
 
@@ -10,7 +10,7 @@ const addLeakData = (req, res) => {
     const data = req.body;
     console.log({data});
     // eslint-disable-next-line camelcase
-    const readable_time= firebase.firestore.Timestamp.fromDate(Date.now());
+    const readable_time = (new Date()).toISOString();
     // eslint-disable-next-line camelcase
     Object.assign(data, {readable_time});
     firestore.collection("students").add(data)
