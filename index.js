@@ -25,6 +25,6 @@ app.post("/add", (req, res) => {
 });
 
 app.post("/addData", addLeakData);
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4001;
 app.listen(port);
 // exports.helloWorld = functions.https.onRequest(app);

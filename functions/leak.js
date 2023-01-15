@@ -8,6 +8,7 @@ const firestore = firebase.firestore();
 const addLeakData = (req, res) => {
   try {
     const data = req.body;
+    console.log({data});
     firestore.collection("students").add(data)
         .then((d)=>res.send("Record saved successfully"));
   } catch (error) {
