@@ -9,6 +9,10 @@ const addLeakData = (req, res) => {
   try {
     const data = req.body;
     console.log({data});
+    // eslint-disable-next-line camelcase
+    const readable_time= firebase.firestore.Timestamp.fromDate(Date.now());
+    // eslint-disable-next-line camelcase
+    Object.assign(data, {readable_time});
     firestore.collection("students").add(data)
         .then((d)=>res.send("Record saved successfully"));
   } catch (error) {
