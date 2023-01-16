@@ -1,7 +1,7 @@
 
 import firebase from 'firebase/app'
 
-firebase.firestore.Timestamp.
+// firebase.firestore.Timestamp.
 
 const firebaseConfig = {
   apiKey: "AIzaSyCgkqfPvh47muosp88D4ZtONOHs-jQFGbA",
